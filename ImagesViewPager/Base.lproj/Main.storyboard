@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImagesViewPager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jrx-fp-44o">
+                                <rect key="frame" x="-40" y="120" width="400" height="300"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFI-Gx-yhF">
+                                        <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="VjU-5F-MWY" id="OGd-Ef-lSX"/>
+                                        </connections>
+                                    </scrollView>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="zIp-Hj-gbX">
+                                        <rect key="frame" x="181" y="243" width="39" height="37"/>
+                                    </pageControl>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="XFI-Gx-yhF" secondAttribute="bottom" id="Ofi-fo-ukc"/>
+                                    <constraint firstItem="XFI-Gx-yhF" firstAttribute="leading" secondItem="jrx-fp-44o" secondAttribute="leading" id="QLx-jN-FJK"/>
+                                    <constraint firstAttribute="height" constant="300" id="UNQ-Ik-Wat"/>
+                                    <constraint firstAttribute="trailing" secondItem="XFI-Gx-yhF" secondAttribute="trailing" id="Wpn-fw-RnF"/>
+                                    <constraint firstItem="zIp-Hj-gbX" firstAttribute="centerX" secondItem="jrx-fp-44o" secondAttribute="centerX" id="bt4-r9-eHN"/>
+                                    <constraint firstItem="XFI-Gx-yhF" firstAttribute="top" secondItem="jrx-fp-44o" secondAttribute="top" id="l3R-Eo-kiO"/>
+                                    <constraint firstAttribute="bottom" secondItem="zIp-Hj-gbX" secondAttribute="bottom" constant="20" id="uhk-Lm-YoO"/>
+                                    <constraint firstAttribute="width" constant="400" id="xz5-kV-NiK"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFa-a2-62e">
+                                <rect key="frame" x="110" y="482" width="100" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7B5-sy-Bfp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jrx-fp-44o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1ep-Xe-xkb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rFa-a2-62e" secondAttribute="trailing" id="2P4-Qg-oK3"/>
+                            <constraint firstItem="rFa-a2-62e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3rk-kV-Jwr"/>
+                            <constraint firstItem="rFa-a2-62e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jwc-a3-1Gn"/>
+                            <constraint firstItem="jrx-fp-44o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="KvH-q9-K7M"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rFa-a2-62e" secondAttribute="bottom" constant="50" id="Nb2-HX-nWi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jrx-fp-44o" secondAttribute="trailing" id="gWR-WE-NaI"/>
+                            <constraint firstItem="jrx-fp-44o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gre-3d-GoX"/>
+                            <constraint firstItem="rFa-a2-62e" firstAttribute="top" secondItem="jrx-fp-44o" secondAttribute="bottom" constant="20" id="sQH-nh-9NK"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gWR-WE-NaI"/>
+                                <exclude reference="gre-3d-GoX"/>
+                                <exclude reference="2P4-Qg-oK3"/>
+                                <exclude reference="3rk-kV-Jwr"/>
+                                <exclude reference="sQH-nh-9NK"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="pagerImageHandler" destination="VjU-5F-MWY" id="JaH-YH-PA1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="VjU-5F-MWY" customClass="PagerImagesIntention" customModule="ImagesViewPager" customModuleProvider="target">
+                    <connections>
+                        <outlet property="pageControlImage" destination="zIp-Hj-gbX" id="WFY-XB-GEd"/>
+                        <outlet property="scrollViewImage" destination="XFI-Gx-yhF" id="IRg-fH-t6a"/>
+                    </connections>
+                </customObject>
+            </objects>
+        </scene>
+    </scenes>
+</document>
